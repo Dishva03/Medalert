@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Modern Healthcare theme - elegant, calming, professional */
+    --background: 250 100% 99%; /* Very light purple-white */
+    --foreground: 260 30% 25%; /* Deep purple-gray */
+
+    --card: 0 0% 100%; /* Pure white for cleanliness */
+    --card-foreground: 260 30% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 30% 25%;
+
+    --primary: 260 80% 50%; /* Rich purple - calming */
+    --primary-rgb: 123, 31, 162; /* RGB values for primary color */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 230 70% 55%; /* Indigo blue - trustworthy */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 250 25% 96%; /* Light purple-gray */
+    --muted-foreground: 260 20% 45%;
+
+    --accent: 260 80% 96%; /* Very light purple */
+    --accent-foreground: 260 80% 50%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 250 20% 92%; /* Soft purple border */
+    --input: 250 20% 92%;
+    --ring: 260 80% 50%;
+
+    --radius: 0.75rem;
+
+    /* Enhanced Healthcare theme colors */
+    --medical-purple: 260 80% 50%; /* Primary purple */
+    --medical-indigo: 230 70% 55%; /* Trustworthy indigo */
+    --medical-light: 260 80% 96%; /* Light accent */
+    --medical-dark: 260 30% 25%; /* Deep professional */
+    --hospital-bg: 250 100% 99%; /* Clean background */
+    --sterile-white: 0 0% 100%; /* Pure white */
+    
+    /* Healthcare gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--sterile-white)), hsl(var(--medical-light)));
+    --gradient-hospital: linear-gradient(180deg, hsl(var(--hospital-bg)), hsl(var(--medical-light)));
+    
+    /* Professional shadows */
+    --shadow-card: 0 4px 12px -2px hsl(var(--primary) / 0.08), 0 2px 6px -1px hsl(var(--primary) / 0.04);
+    --shadow-hover: 0 8px 30px -8px hsl(var(--primary) / 0.15);
+    --shadow-medical: 0 2px 8px -2px hsl(199 89% 48% / 0.1);
+    
+    /* Smooth medical animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 260 30% 12%;
+    --foreground: 250 20% 98%;
+
+    --card: 260 25% 16%;
+    --card-foreground: 250 20% 98%;
+
+    --popover: 260 25% 16%;
+    --popover-foreground: 250 20% 98%;
+
+    --primary: 260 70% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 230 60% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 260 25% 20%;
+    --muted-foreground: 260 20% 70%;
+
+    --accent: 260 25% 20%;
+    --accent-foreground: 260 70% 60%;
+
+    --destructive: 0 62% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 260 25% 20%;
+    --input: 260 25% 20%;
+    --ring: 260 70% 60%;
+    
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-card: linear-gradient(145deg, hsl(260 25% 16%), hsl(260 25% 20%));
+    
+    /* Dark mode shadows */
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-hover: 0 8px 25px -8px hsl(var(--primary) / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
